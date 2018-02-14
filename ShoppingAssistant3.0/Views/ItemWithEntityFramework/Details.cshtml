@@ -1,0 +1,100 @@
+﻿@model ShoppingAssistant3._0.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Store.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Allergens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Allergens)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aisle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aisle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Section)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section)
+        </dd>
+
+    </dl>
+
+    <h4>Tags</h4>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+        </tr>
+
+        @foreach (var item in Model.ItemAndTags)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tag.Name)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit Tags", "EditTags", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

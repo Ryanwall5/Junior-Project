@@ -1,0 +1,23 @@
+﻿
+@using (Html.BeginForm("StoreSearch", "Store", FormMethod.Post))
+{
+
+    <div class="input-group">
+        <input type="text" class="form-control" style="height:60px; font-size: 30px; box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" name="storename" placeholder="Search for store..." aria-label="Search for..." data-store-autocomplete="@Url.Action("AutocompleteStore")">
+        <span class="input-group-btn">
+            <button class="btn btn-sm" style="box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); width:50px; height:60px; font-size: 30px;" type="submit">
+                <i data-toggle="tooltip" data-placement="bottom" title="Press for speech" class="material-icons">
+                    micro
+                </i>
+            </button>
+        </span>
+    </div>
+
+
+    <div style="padding-top: 10px">
+        <button type="submit" data-toggle="tooltip" data-placement="bottom" title="Press for search" class="btn btn-primary" style="height:40px; font-size: 20px;">
+            Store Search
+        </button>
+    </div>
+
+}

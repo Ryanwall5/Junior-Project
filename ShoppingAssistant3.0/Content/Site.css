@@ -1,0 +1,258 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+
+
+
+.jumbotron {
+    background-color: white;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    width: 100%;
+    padding: 0;
+    
+}
+
+.storelisttable td {
+    font-size: 1em;
+    border: 1px solid #333;
+    padding: 5px 7px 5px 7px;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: red;
+}
+.navbar-default .navbar-nav > li:hover {
+
+    background-color: white;
+}
+
+
+.navbar-default{
+    border-color: none;
+}
+
+
+
+/*.navbar #mynavbar li {
+}
+
+
+.navbar-default li {
+}
+
+.navbar-header {
+}
+
+.navbar-collapse {
+}
+
+.navbar-brand {
+}*/
+
+
+
+.table-hover > tbody > tr:hover {
+    background-color: #15c715;
+    cursor: pointer;
+    color: black;
+}
+
+
+.table-hover > tbody > tr:hover a {
+    background-color: #15c715;
+    cursor: pointer;
+    color: white;
+}
+
+
+.panel {
+    background-color: white;
+    border: none;
+}
+
+.panel-footer {
+    background-color: white;
+    border: none;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eaeaea;
+}
+
+footer > ul > li > a{
+
+    color: white;
+
+}
+
+footer
+{
+    padding-top:25px;
+}
+/*.shoppinglisttable {
+    table-layout: fixed;
+    white-space:nowrap;
+    width: 100%;
+}
+    .shoppinglisttable td, .shoppinglisttable th {
+        text-align: left;
+
+    }
+        .shoppinglisttable td 
+        {
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }*/
+/*.row-item {
+           text-align: left;
+            width: 30%;
+        }
+.row-price {
+    width: 20%;
+
+}
+.row-quantity {
+    width: 40%;
+}
+.row-remove {
+    width: 10%;
+}*/
+aside {
+    text-align: center;
+}
+
+    /*aside .shopping-list {
+    }*/
+
+        aside .shopping-list th {
+            color: black;
+            font-weight: bold;
+        }
+
+    /*aside .shopping-list-title {
+    }*/
+
+.modal-dialog {
+    width: 500px;
+    height: 300px;
+}
+
+/*.sectiongroup:hover {
+    fill: green;
+}
+
+
+    .sectiongroup:hover .sectionfont {
+        fill: white;
+        cursor: pointer
+    }
+
+
+
+.sectiongroup {
+    fill: none;
+}
+
+    .sectiongroup .sectionfont {
+        fill: black;
+    }
+
+
+.othersectiongroup {
+    fill: green;
+}
+
+    .othersectiongroup .sectionfont {
+        fill: white;
+    }
+
+
+#mystore {
+    text-align: center;
+    font-size: 65px;
+}*/
+
+
+.sectiongroup:hover {
+    fill: green;
+}
+
+
+    .sectiongroup:hover .sectionfont {
+        fill: white;
+        cursor: pointer
+    }
+
+
+
+.sectiongroup {
+    fill: none;
+}
+
+    .sectiongroup .sectionfont {
+        fill: black;
+    }
+
+#mystore {
+    text-align: center;
+    font-size: 65px;
+}
+
+.maincontent {
+    background-color: yellow;
+}
+
+
+.shopping-list-title {
+    font-size: 3.5em;
+    font-weight: bolder;
+}
+
+#footercopyright {
+    color: black;
+    font-size: 16px;
+}

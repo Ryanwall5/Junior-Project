@@ -1,0 +1,304 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    ViewBag.returnurl = "Home/Index";
+}
+
+<style>
+
+</style>
+<div style="margin-bottom: 10px;" class="row jumbotron indexclass jumboclass">
+    <div class="col-lg-8 col-lg-offset-4 col-lg-pull-2">
+
+        <div class="panel">
+            <div class="panel-heading">
+                <div class="btn-group" data-toggle="buttons">
+                    <h2>Search By: </h2>
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="searchtype" id="option1" autocomplete="off" checked> item (preselected)
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="searchtype" id="option2" autocomplete="off"> Store
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="searchtype" id="option3" autocomplete="off"> Shopping List
+                    </label>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="searchformdiv">
+                </div>
+            </div>
+            <div class="panel-footer">
+                <h4 id="panelfootererror" class="text-danger">@Html.Raw(ViewBag.Error)</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="margin-bottom: 10px;" class="row jumbotron indexclass jumboclass">
+    <div class="col-lg-8 col-lg-offset-4 col-lg-pull-2">
+        @if (Request.IsAuthenticated)
+        {
+            <h2>
+                @Html.ActionLink("Current Home Store: " + (string)ViewBag.UserHomeStore, "StoreSearch", "Store", routeValues: new { storename = ViewBag.UserHomeStore }, htmlAttributes: new { title = "Store" })
+            </h2>
+            <h4>
+                <button data-toggle="collapse" data-target="#collapsestoremap" class="btn btn-default">Store Map</button>
+            </h4>
+        }
+        else
+        {
+            <h1>Log In To Set Your Home Store</h1>
+        }
+        <p class="lead">
+            My store is all about creating the easiest possible customer experience.
+            My store is very similar in how google maps works.
+            In My Store you will be looking up items in the store and the item will be marked on the store map below.
+            As well as if you have created a shopping list all of your items on the list will be marked in the store. Or at least
+            the sections that the items are in will be green.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+@*<div class="collapse" id="collapsestoremap">
+
+    @Html.Partial("_StoreMap")
+
+</div>*@
+
+<div class="col-md-12">
+    @if (Request.IsAuthenticated)
+    {
+
+        <div class="jumbotron">
+            <div class="text-center">
+                <h2>Recently Searched Items</h2>
+            </div>
+
+            @Html.Action("DisplayRecentUserSearchedItems")
+        </div>
+    }
+    else
+    {
+        <div class="jumbotron">
+            <div class="text-center">
+                <h2>Random Items</h2>
+            </div>
+
+            @Html.Action("DisplayRandomItems")
+        </div>
+    }
+
+</div>
+
+
+
+
+
+
+@section Scripts
+{
+    <script>
+
+        //var dialog2;
+
+        //dialog2 = $("#SectionModal").dialog({
+        //    autoOpen: false,
+        //    height: 300,
+        //    width: 600,
+        //    modal: true,
+        //    buttons: {
+        //        close: function () {
+        //            dialog2.dialog("close");
+        //            $(".modaltable tbody").html("");
+        //        }
+        //    }
+        //});
+
+
+        window.onload = function () {
+            var itemsearch = document.getElementById('option1');
+            var url = "/Home/Index";
+            if (itemsearch.checked) {
+                var itemsearchstring = 'itemsearch';
+                $("#searchformdiv").load(url, { searchchoice: itemsearchstring });
+            }
+
+            // $("#shoppinglistpartialdiv").load("/ShoppingList/GetUserShoppingLists");
+
+
+        }
+
+
+
+
+        $(document).ready(function () {
+            console.log('ready function ran');
+
+            //$("#yourstoreform").click(function () {
+
+
+            //});
+
+
+           
+
+
+        $(document).ajaxSuccess(function () {
+
+            $("*[data-item-autocomplete]")
+                .each(function () {
+                    $(this).autocomplete({
+                        source: $(this).data("item-autocomplete")
+                    });
+                });
+
+            $("*[data-store-autocomplete]")
+                .each(function () {
+                    $(this).autocomplete({
+                        source: $(this).data("store-autocomplete")
+                    });
+                });
+        });
+
+
+
+        $("input[name='searchtype']").change(function (e) {
+            var itemsearch = document.getElementById('option1');
+            var storesearch = document.getElementById('option2');
+            var shoppinglistsearch = document.getElementById('option3');
+            var error = document.getElementById("panelfootererror");
+            var itemsearchstring = 'itemsearch';
+            var storesearchstring = 'storesearch';
+            var shoppinglistsearchstring = 'shoppinglistsearch';
+
+            var url = "/Home/Index";
+            if (itemsearch.checked) {
+
+                error.innerHTML = "";
+                $("#searchformdiv").load(url, { searchchoice: itemsearchstring });
+            }
+            else if (storesearch.checked) {
+
+                error.innerHTML = "";
+                $("#searchformdiv").load(url, { searchchoice: storesearchstring });
+            }
+            else if (shoppinglistsearch.checked) {
+
+                error.innerHTML = "";
+                $("#searchformdiv").load(url, { searchchoice: shoppinglistsearchstring });
+            }
+
+
+        });
+
+
+
+                
+                    });
+
+
+
+
+
+
+
+
+
+        function addItemToShoppingListFromSearch() {
+            var iteminput = $("#itemtoadd").val();
+            var currentshoppinglistId = $('.currentshoppinglistId').attr("value");
+            var item = $('div.item.active').contents();
+            var value = item[3].value;
+            $.getJSON("../ShoppingList/AddToShoppingList", { item: iteminput, listId: value },
+                function (data) {
+
+                    if (data.found == false) {
+                        alert(data.error);
+                        return false;
+                    }
+                    else {
+                        alert('You have added ' + data.itemfound + ' to your ' + data.list + ' shopping list!');
+                        // alert('You have added ' + data.itemfound + ' to your ' + data.list + ' shopping list!');
+                        $("#shoppinglistpartialdiv").load("/ShoppingList/GetUserShoppingListsandreturnpartial");
+                        //$(".shoppinglisttable tbody").append($.map(data.itemfound, function (ignore, index) {
+                        //    return '<tr><td>' + data.itemfound[index].Name + '</td><td><button class="btn btn-danger btn-sm">remove</button></td></tr>';
+                        //}).join());
+
+                        var section = data.sectionofitem;
+                        section = "." + section + "section";
+                        alert(section);
+                        $(section).removeClass("sectiongroup");
+                        $(section).addClass("othersectiongroup");
+                        //$(".sectiongroup" + section).css({ fill: "green" });
+                    }
+                });
+        }
+
+
+
+
+        //$(".modal").on("hidden.bs.modal", function () {
+        //    $(".modaltable tbody").html("");
+        //});
+
+        //function SectionClick(clickedSection) {
+        //    var sectionid = clickedSection;
+
+        //    $.getJSON("../Item/GetItemsInSection", { section: sectionid },
+        //        function (data) {
+        //            // i need to add an onclick listener to the button as well to add to the shopping list
+
+        //            $('.modaltable tbody').append(
+        //                $.map(data.itemsfound, function (ignore, index) {
+        //                    var id = data.itemsfound[index].Id;
+        //                    var itemname = data.itemsfound[index].Name;
+        //                    return '<tr><td>' + data.itemsfound[index].Name + '</td><td>' + data.itemsfound[index].InstockYesOrNo + '</td><td>' + data.itemsfound[index].StockAmount + '</td><td>' + data.itemsfound[index].priceformatted + '</td><td>' + '<button data-id=' + id + ' class="btn btn-success btn-group-sm sectionmodalbtn" onclick="additemtoshoppinglist(' + id + ')">Add To List</button>' + '</td></tr>';
+        //                }).join());
+        //            dialog2.dialog("open");
+        //        }
+        //    );
+        //}
+
+
+        //function additemtoshoppinglist(id) {
+        //    var item = $('div.item.active').contents();
+        //    var value = item[3].value;
+        //    $.getJSON("../ShoppingList/AddToShoppingListWithItemId", { theitemid: id, listId: value },
+        //        function (data) {
+
+        //            if (data.found == false) {
+        //                alert(data.error);
+        //                return false;
+
+        //            }
+        //            else {
+        //                //alert('You have added ' + data.itemfound.Name + ' to your ' + data.list + ' shopping list!');
+        //                alert('You have added ' + data.itemfound + ' to your ' + data.list + ' shopping list!');
+
+        //                $("#shoppinglistpartialdiv").load("/ShoppingList/GetUserShoppingListsandreturnpartial");
+
+
+
+
+        //                var section = data.sectionofitem;
+        //                section = "." + section + "section";
+        //                //var thesection = document.getElementsByClassName(section);
+        //                alert(section);
+        //                var section = data.sectionofitem;
+        //                section = "." + section + "section";
+        //                alert(section);
+        //                $(section).removeClass("sectiongroup");
+        //                $(section).addClass("othersectiongroup");
+        //            }
+        //        });
+        //}
+
+    </script>
+}

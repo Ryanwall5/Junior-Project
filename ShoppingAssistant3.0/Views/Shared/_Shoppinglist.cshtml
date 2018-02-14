@@ -1,0 +1,179 @@
+﻿
+
+
+@model IEnumerable<ShoppingAssistant3._0.Models.ShoppingList>
+
+@{
+    var count = 0;
+    string path = HttpContext.Current.Request.Url.AbsolutePath;
+
+}
+
+
+@* ------ I need to Add a carousel to the table so the user can go through all of there lists easily---------- *@
+
+<div class="text-center">
+
+    <button id="createnewbtn" class="btn btn-link createnewbtn" data-toggle="collapse" data-target="#createnewshoppinglist">Create New</button>
+
+    <select class="shoppinglistssselect" id="shoppinglistssselect">
+        @foreach (var shoplist in Model)
+        {
+
+            <option>@shoplist.Name</option>
+
+        }
+    </select>
+
+</div>
+<div class="shopping-list">
+    <div class="collapse text-center" id="createnewshoppinglist">
+        <div class="card card-body">
+
+            <input id="shoplistnameid" name="listname" type="text" placeholder="Shoppinglist Name..." />
+            <input name="listdate" hidden type="datetime" value="@DateTime.Now" />
+            <button class="btn btn-default btn-warning" onclick="CreateNewShoppingList()">Create</button>
+        </div>
+    </div>
+
+    <div id="shoplistcarousel" class="carousel slide" data-ride="shoplistcarousel" data-interval="false">
+        <div class="carousel-inner">
+            @foreach (var shoplist in Model)
+            {
+                if (count == 0)
+                {
+                    <div class="item active text-center">
+
+                        <h3 id="shoppinglistname">@shoplist.Name</h3>
+                        <input hidden class="currentshoppinglistId" value="@shoplist.Id" />
+                        <div class="table-responsive">
+
+                            <table id="mytable" class="table table-hover shoppinglisttable" style="text-align: left">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-left row-item ">Item</th>
+                                        <th class="text-left row-price ">Price</th>
+                                        <th class="text-left row-quantity ">Quantity</th>
+                                        <th class="text-left row-remove ">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in shoplist.ItemsAndLists.Where(x => x.ShoppingListId == shoplist.Id))
+    {
+                              <tr>                             
+                                    <td>
+                                        <img height="50" width="50" src="~/Content/Product-Image-Coming-Soon.png" />
+                                    </td>
+                                    <td>
+
+                                        @Html.ActionLink(item.Item.Name, "DetailsById", "Item", routeValues: new { id = item.Item.Id }, htmlAttributes: new { id = "itemid" })
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Item.Price)
+                                    </td>
+                                    <td>
+
+                                        @Html.EditorFor(modelItem => item.QuantityBought)
+                                    </td>
+                                    <td>
+                                        <button onclick="RemoveItemFromList(@item.Item.Id)" class="glyphicon glyphicon-remove btn btn-danger"></button>
+                                    </td>
+                                </tr>
+                                //totalListCost += item.Item.Price;
+                                }
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div>
+
+                            <hr />
+                            <h4 class="text-success">Total Price: $@shoplist.ItemsAndLists.Sum(y => y.Item.Price * y.QuantityBought)</h4>
+                            <div>
+                                <button id="resetbtn" class="btn btn-warning resetshoppinglistbtn">Reset List</button>
+                                <button id="getmapbtn" class="btn btn-warning resetshoppinglistbtn">Get Map</button>
+                            </div>
+
+                            @*<hr />
+        <h4 class="text-success">Total Price: @shoplist.totalPrice</h4>*@
+
+                        </div>
+                    </div>
+
+
+                    count++;
+                }
+                else
+                {
+                    <div class="item text-center">
+                        <h3>@shoplist.Name</h3>
+                        <input hidden class="currentshoppinglistId" value="@shoplist.Id" />
+                        <div class="table-responsive">
+                            <table class="table table-hover shoppinglisttable">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">Item</th>
+                                        <th class="text-center">Price</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-center">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in shoplist.ItemsAndLists.Where(x => x.ShoppingListId == shoplist.Id))
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img height="50" width="50" src="~/Content/Product-Image-Coming-Soon.png" />
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink(item.Item.Name, "Details", "Item", routeValues: new { item = item.Item }, htmlAttributes: new { id = "itemid" })
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Item.Price)
+                                            </td>
+                                            <td>
+                                                @Html.EditorFor(modelItem => item.QuantityBought)
+                                            </td>
+                                            <td>
+                                                <button onclick="RemoveItemFromList(@item.Item.Id)" class="glyphicon glyphicon-remove btn btn-danger"></button>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div>
+
+                            <hr />
+                            <h4 class="text-success">Total Price: $@shoplist.ItemsAndLists.Sum(y => y.Item.Price * y.QuantityBought)</h4>
+
+
+                            @*<hr />
+                                <h4 class="text-success">Total Price: @shoplist.totalPrice</h4>*@
+                            <div>
+                                <label for="resetbtn">Click button to reset list</label>
+                                <button id="resetbtn" class="btn btn-warning resetshoppinglistbtn">Reset List</button>
+                                <h4 for="getmapbtn">Click button to get map</h4>
+                                <button id="getmapbtn" class="btn btn-warning resetshoppinglistbtn">Get Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            }
+        </div>
+
+
+        <div class="controls-top text-center">
+            <a class="btn-floating btn-lg" href="#shoplistcarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left text-danger"></i></a>
+            <a class="btn-floating btn-lg" href="#shoplistcarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right text-danger"></i></a>
+        </div>
+
+    </div>
+</div>

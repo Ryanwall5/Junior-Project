@@ -1,0 +1,303 @@
+﻿
+@model ShoppingAssistant3._0.Models.ItemViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron text-center">
+            <h1 id="itemnameId" style="color:orangered; font-size: 90px">@Model.Name</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img style="height: 100%; width: 100%" src="~/Content/Product-Image-Coming-Soon.png" alt="Sample Photo" />
+        <p style="padding-top: 25px"><button onclick="addItemOnBtnClick()" class="tn btn-primary btn-lg btn-block">Add To Shopping List</button></p>
+        @*<p style="padding-top: 10px"><button onclick="SetSVGColorForSection()" class="tn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#locationModal">Location</button></p>*@
+        <p style="padding-top: 10px"><button onclick="SetSVGColorForSection()" class="tn btn-primary btn-lg btn-block">Location</button></p>
+    </div>
+
+    <!-- Modal -->
+    @*<div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 75%; height: 75%;" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="locationModalLabel">Aisle @Model.Aisle</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+            
+
+                    @Html.Partial("_StoreMap");
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+    <div id="storemapmodal"  class="storemapmodal">
+        @Html.Partial("_StoreMap");
+    </div>
+
+
+    <div class="col-md-6">
+        <div>
+            <h2><b>Item Info</b></h2>
+            <hr />
+        </div>
+        <table style="padding: 25px; font-size: xx-large; margin: 5px; margin-right: 10px;">
+            <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.priceformatted)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.InStock)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.InStock)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.StockAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.StockAmount)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Allergens)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Allergens)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div>
+            <h2><b>Nutritional Facts</b></h2>
+            <hr />
+        </div>
+        <table style="padding: 25px; font-size: xx-large; margin: 5px">
+            <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Calories
+                    </td>
+                    <td>
+                        200
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Fat
+                    </td>
+                    <td>
+                        14g
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Saturated Fat
+                    </td>
+                    <td>
+                        8g
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cholesterol
+                    </td>
+                    <td>
+                        55mg
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sodium
+                    </td>
+                    <td>
+                        75mg
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Carbohydrate
+                    </td>
+                    <td>
+                        26g
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dietary Fiber
+                    </td>
+                    <td>
+                        0g
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sugars
+                    </td>
+                    <td>
+                        26g
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Protein
+                    </td>
+                    <td>
+                        6g
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+
+       
+        var dialog, dialog2;
+
+            dialog = $("#storemapmodal").dialog({
+                autoOpen: false,
+                height: 400,
+                width: 700,
+                modal: true
+            });
+
+            dialog2 = $("#SectionModal").dialog({
+                autoOpen: false,
+                height: 300,
+                width: 600,
+                modal: true,
+                buttons: {
+                    close: function () {
+                        dialog2.dialog("close");
+                        dialog.dialog("open");
+                        $(".modaltable tbody").html("");
+                    }
+                }      
+            });
+            
+
+        function SetSVGColorForSection() {
+
+            dialog.dialog("open");
+            var section = "@Model.Section";
+            section = "." + section + "section";
+            alert(section);
+            $(".sectiongroup" + section).css({ fill: "green" });
+           // section.style.fill='green';
+
+        }
+
+        function addItemOnBtnClick()
+        {
+
+          
+            var Name = "@Model.Name";
+                //var currentshoppinglistId = $('.currentshoppinglistId').attr("value");
+                var item = $('div.item.active').contents();
+                var value = item[3].value;
+        $.getJSON("../ShoppingList/AddToShoppingList", { item: Name, listId: value },
+            function (data) {
+                if (data.found == false) {
+                    alert(data.error);
+                    return false;
+
+                }
+                else {
+                    alert('You have added ' + data.itemfound + ' to your ' + data.list + ' shopping list!')
+                    $("#shoppinglistpartialdiv").load("/ShoppingList/GetUserShoppingListsandreturnpartial");
+
+
+
+                    var section = data.sectionofitem;
+                    section = "." + section + "section";
+                    alert(section);
+                    $(".sectiongroup" + section).css({ fill: "green" });
+                }
+            });
+        }
+
+        //$(".modal").on("hidden.bs.modal", function () {
+        //    $(".modaltable tbody").html("");
+        //});
+
+
+   
+      
+
+        function SectionClick(clickedSection) {
+            dialog.dialog("close");
+            var sectionid = clickedSection;
+
+            $.getJSON("../Item/GetItemsInSection", { section: sectionid },
+                function (data) {
+                    // i need to add an onclick listener to the button as well to add to the shopping list
+
+                    $('.modaltable tbody').append(
+                        $.map(data.itemsfound, function (ignore, index) {
+                            var id = data.itemsfound[index].Id;
+                            var itemname = data.itemsfound[index].Name;
+                            return '<tr><td>' + data.itemsfound[index].Name + '</td><td>' + data.itemsfound[index].InstockYesOrNo + '</td><td>' + data.itemsfound[index].StockAmount + '</td><td>' + data.itemsfound[index].priceformatted + '</td><td>' + '<button data-id=' + id + ' class="btn btn-success btn-group-sm sectionmodalbtn" onclick="additemtoshoppinglist(' + id + ')">Add To List</button>' + '</td></tr>';
+                        }).join());
+                    
+                    dialog2.dialog("open");
+                }
+            );
+        }
+
+
+
+
+
+    </script>
+}

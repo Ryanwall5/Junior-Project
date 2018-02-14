@@ -1,0 +1,512 @@
+﻿
+@using Microsoft.AspNet.Identity
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+    <header>
+
+        @if (Request.IsAuthenticated)
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="~/Home/UserIndex">
+                        <svg width="400" height="100">
+                            <image width="100" height="100" xlink:href="~/Content/ShoppingCart.jpg">
+                            </image>
+                            <text x="105" y="50" fill="red" font-weight="bolder" font-family="fantasy" font-size="40px" stroke-width="1" stroke="black">
+                                Shopping
+                            </text>
+                            <text x="105" y="90" fill="red" font-weight="bolder" font-family="fantasy" font-size="40px" stroke-width="1" stroke="black">
+                                Assistant
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="~/Home/Index">
+                        <svg width="400" height="100">
+                            <image width="100" height="100" xlink:href="~/Content/ShoppingCart.jpg">
+                            </image>
+                            <text x="105" y="50" fill="red" font-weight="bolder" font-family="fantasy" font-size="40px" stroke-width="1" stroke="black">
+                                Shopping
+                            </text>
+                            <text x="105" y="90" fill="red" font-weight="bolder" font-family="fantasy" font-size="40px" stroke-width="1" stroke="black">
+                                Assistant
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        }
+
+        <hr />
+
+        <nav class="navbar navbar-default" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+            <div class="container-fluid bg-primary mainnavbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li><a href="~/Home/UserIndex">Home</a></li>
+                            <li><a href="~/Item/Index">Items</a></li>
+                            <li><a href="~/ItemWithEntityFramework/Index">ItemWIthEntityFramework</a></li>
+                            <li><a href="~/Tags/Index">Tags</a></li>
+                            <li><a href="~/AdminStores/Index">Stores (Admin)</a></li>
+                            <li><a href="~/Store/BuildAStore">Build-A-Store</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="~/Home/Index">Home</a></li>
+                            <li><a href="~/Item/Index">Items</a></li>
+                            <li><a href="~/ItemWithEntityFramework/Index">ItemWIthEntityFramework</a></li>
+                            <li><a href="~/Tags/Index">Tags</a></li>
+                            <li><a href="~/AdminStores/Index">Stores (Admin)</a></li>
+                            <li><a href="~/Store/BuildAStore">Build-A-Store</a></li>
+                        }
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-9 ">
+
+                @RenderBody()
+
+            </div>
+
+
+            <div class="col-md-3 well">
+
+                <h3 class="shopping-list-title text-capitalize text-center text-primary">
+                    <span class="text-info">Shopping</span>
+                    List
+                </h3>
+
+
+
+                <div class="slaside text-center">
+                    @if (!Request.IsAuthenticated)
+                    {
+
+
+                        <p style="padding-top: 25px">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-block btn-success" })</p>
+                        <p style="padding-top: 10px">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-block btn-success" })</p>
+
+                    }
+                    else
+                    {
+
+                        <div id="shoppinglistpartialdiv">
+
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="SectionModal">
+        <div class="text-center">
+            <h1 id="SectionModalh1"></h1>
+        </div>
+        <div class="modal-body">
+            <table class="table table-bordered modaltable" id="sectionlisttable" style="padding: 10px; font-size: large">
+                <thead>
+                    <tr>
+                        <th>
+                            Item Name
+                        </th>
+                        <th>
+                            Instock
+                        </th>
+                        <th>
+                            How Many Instock
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Add To List
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="sectionmodalbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid bg-primary">
+        <ul class="text-center" style="list-style-type: none; ">
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li><p id="footercopyright">&copy; Shopping Assistant</p></li>
+        </ul>
+    </footer>
+
+    @Scripts.Render("~/bundles/shoppingassistant")
+
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/raphael-min.js"></script>
+
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+
+        var dialog2 = $("#SectionModal").dialog({
+            title: "Section"
+            autoOpen: false,
+            height: 300,
+            width: 600,
+            modal: true,
+            close: function (event, ui) {
+                $(".modaltable tbody").html("");
+            }
+        });
+
+
+        var mouseover = function (event) {
+            this.attr({ fill: "yellow" });
+        }
+        var mouseoutred = function (event) {
+            this.attr({ fill: "red" });
+        }
+
+
+        var mouseover = function (event) {
+            this.attr({ fill: "yellow" });
+        }
+        var mouseoutgreen = function (event) {
+            this.attr({ fill: "green" });
+        }
+
+
+        $(document).on('click', '.shoppinglisttable tbody tr', function () {
+            $(this).css("display", "none");
+        });
+
+        $(document).on('click', '.resetshoppinglistbtn', function () {
+            $("#shoppinglistpartialdiv").load('@Url.Action("GetUserShoppingListsandreturnpartial", "ShoppingList")');
+        });
+
+
+        function GetActiveShoppingListId() {
+            var activecarousel = $('div.item.active').contents();
+            return activecarousel[3].value;
+        };
+
+
+        function highLightSections(items, sectionname) {
+
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].Section === sectionname) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        var getitemsforsection = function (event) {
+            var sectionname = this.data("i");
+            console.log(sectionname);
+
+            this.id = sectionname;
+           
+            $.getJSON("../Item/GetItemsInSection", { section: sectionname },
+                function (response) {
+                    if (response.success) {
+                        $("#SectionModalh1").text(sectionname);
+
+                        $('.modaltable tbody').append(
+                            $.map(response.itemsfound, function (ignore, index) {
+                                var id = response.itemsfound[index].Id;
+                                var itemname = response.itemsfound[index].Name;
+                                return '<tr><td>' + response.itemsfound[index].Name + '</td><td>' + response.itemsfound[index].InstockYesOrNo + '</td><td>' + response.itemsfound[index].StockAmount + '</td><td>' + response.itemsfound[index].priceformatted + '</td><td>' + '<button data-id=' + id + ' class="btn btn-success btn-group-sm sectionmodalbtn" onclick="additemtoshoppinglist(' + id + ')">Add To List</button>' + '</td></tr>';
+                            }).join());
+                        dialog2.dialog("open");
+                    }
+                    else {
+                        alert(response.error);
+                    }
+                });
+         };
+
+        
+
+
+        $(document).on('click', '#getmapbtn', function () {
+
+            var container = $('<div id="storemapouterdiv" style="overflow-x: scroll; overflow-y: scroll"><h2 class="text-center" id="storemaptitle">Store Map</h2> <div id="storemapdiv"></div>  </div>')
+
+            $('body').append(container);
+
+
+
+            var mapdialog = $("#storemapouterdiv").dialog({
+                title: "Store Map",
+                autoOpen: false,
+                height: 500,
+                width: 900,
+                modal: true,
+                close: function (event, ui)
+                    {
+                    $("#storemapouterdiv").html("");
+                    }
+            });
+
+      
+
+
+            var shoppinglistid = GetActiveShoppingListId();
+            
+            $.getJSON("../Store/GetStoreMapDetails", { listId: shoppinglistid },
+                function (response) {
+
+                    if (!response.success) {
+                        alert(data.error);
+                        return false;
+
+                    }
+                    else {
+
+                        var w = 900;
+                        var h = 500;
+
+                        var paper = Raphael("storemapdiv", w, h);
+
+                        paper.setViewBox(0, 0, w, h);
+
+
+
+                        var paperheight = paper.height;
+                        var paperwidth = paper.width;
+
+
+
+                        var shelves = response.shelves;
+                        var sections = response.sections;
+                        var items = response.items;
+
+                        for (var i = 0; i < sections.length; i++) {
+                            
+                            if (highLightSections(items, sections[i].Name)) {
+                                paper.add(paper.rect(sections[i].Xcoord, sections[i].Ycoord, sections[i].Width, sections[i].Height)
+                                    .data("i", sections[i].Name)
+                                    .hover().click(getitemsforsection).attr({ fill: "green", cursor: "pointer" }));
+                            }
+                            else {
+                                paper.add(paper.rect(sections[i].Xcoord, sections[i].Ycoord, sections[i].Width, sections[i].Height)
+                                    .data("i", sections[i].Name)
+                                    .hover(mouseover, mouseoutred).click(getitemsforsection).attr({ fill: "red", cursor: "pointer" }));
+                            }
+
+                            var x = ((sections[i].Width / 2) + sections[i].Xcoord);
+                            var y = ((sections[i].Height / 2) + sections[i].Ycoord + 5);
+
+                            var text = paper.text(x, y, sections[i].Number).attr({ 'font-weight': 'bold', 'font-size': 16 })
+
+                            try {
+                                if (text.node.childNodes[0].attributes[0].name == "dy") {
+                                    text.node.childNodes[0].attributes[0].value = 0;
+                                }
+                            } catch (err) { }
+                        }
+                        mapdialog.dialog('open');
+                    }
+                });
+        });
+
+
+
+
+
+        $(function () {
+            console.log('ready function ran');
+
+            $("#shoppinglistpartialdiv").load('@Url.Action("GetUserShoppingListsandreturnpartial", "ShoppingList")');
+
+        });
+
+
+        function DisplayMap() {
+
+
+
+
+        }
+
+
+        function additemtoshoppinglist(id) {
+            var item = $('div.item.active').contents();
+            var value = item[3].value;
+            $.getJSON("../ShoppingList/AddToShoppingListWithItemId", { theitemid: id, listId: value },
+                function (data) {
+
+                    if (data.found == false) {
+                        alert(data.error);
+                        return false;
+
+                    }
+                    else {
+                        //alert('You have added ' + data.itemfound.Name + ' to your ' + data.list + ' shopping list!');
+                        alert('You have added ' + data.itemfound + ' to your ' + data.list + ' shopping list!');
+                        $("#shoppinglistpartialdiv").load("/ShoppingList/GetUserShoppingListsandreturnpartial");
+
+                        //var section = data.sectionofitem;
+                        //  section = "." + section + "section";
+                        // alert(section);
+                        // $(".sectiongroup" + section).css({ fill: "green" });
+
+                         var section = data.sectionofitem;
+                         section = "." + section + "section";
+                         //var thesection = document.getElementsByClassName(section);
+                         alert(section);
+                         var section = data.sectionofitem;
+                         section = "." + section + "section";
+                         alert(section);
+                         $(section).removeClass("sectiongroup");
+                         $(section).addClass("othersectiongroup");
+                    }
+                });
+        }
+
+        function CreateNewShoppingList() {
+            alert("inside create new shoppinglist");
+            var listname = $('#shoplistnameid').val();
+            $.getJSON("../ShoppingList/CreateShoppingList", { newshoplist: listname },
+                    function (data) {
+                        if (data.listadded == false) {
+                            alert('You already have a list named ' + listname + ' try another name!');
+                            return false;
+                        }
+                        else {
+                            alert('You have added a new list called ' + listname);
+                            $("#shoppinglistpartialdiv").load('@Url.Action("GetUserShoppingListsandreturnpartial", "ShoppingList")');
+
+
+                        }
+                    });//end of getjson
+
+        }
+
+
+
+        function RemoveItemFromList(Id)
+        {
+
+            alert(Id);
+            var item = $('div.item.active').contents();
+            var value = item[3].value;
+            $.getJSON("../ShoppingList/RemoveItemFromShoppingList", { theitemid: Id, listId: value },
+                function (data) {
+
+                    if (data.found == false) {
+                        alert(data.error);
+                        return false;
+
+                    }
+                    else {
+                        //alert('You have Deleted ' + data.itemfound.Name + ' from your ' + data.list + ' shopping list!');
+                        alert('You have Deleted ' + data.itemfound + ' from your ' + data.list + ' shopping list!');
+                        $("#shoppinglistpartialdiv").load('@Url.Action("GetUserShoppingListsandreturnpartial", "ShoppingList")');
+
+
+                        var section = data.sectionofitem;
+                        section = "." + section + "section";
+                        alert(section);
+                        $(section).removeClass("othersectiongroup");
+                        $(section).addClass("sectiongroup");
+                        //$(".sectiongroup" + section).css({ fill: "none" });
+                        //$(".sectiongroup" + section + ".sectionfont").css({ fill: "black" });
+                    }
+                });
+
+
+
+
+
+        }
+
+
+
+        @*function filldropdownwithshoppinglists() {
+                $.getJSON(@Url.Action("GetUserShoppingListsandreturnpartial", "ShoppingList")',
+                    function (data) {
+                        var dropdown = $('#shoppinglistssselect');
+
+                        if (data.listsfound.length == 0) {
+                            dropdown.append("<option> None </option>");
+                        }
+                        else {
+                            $.each(data.listsfound, function (index, value) {
+                                dropdown.append("<option>" + data.listsfound[index].Name + "</option>");
+                            });
+                        }
+                    }
+                );
+        }*@
+
+
+
+        //function rightbtnclick() {
+        //    var items = $('.item');
+        //    var item = $('.item').find('active');
+        //    item.removeClass('active');
+        //    $('.carousel').carousel('next');
+
+        //}
+
+        //function leftbtnclick() {
+        //    var items = $('div.item');
+        //    var item = $('div.item.active');
+        //    item.removeClass('active');
+        //    $('.carousel').carousel('prev');
+        //}
+
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,207 @@
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll.config
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.pdb
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Owin.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.pdb
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll.config
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.pdb
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll.config
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Owin.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll.config
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csprojResolveAssemblyReference.cache
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csproj.CoreCompileInputs.cache
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.pdb
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.xml
+C:\Users\thegr\OneDrive\Documents\Visual Studio 2017\JuniorProject\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.pdb
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Nate\Source\Workspaces\ShoppingAssistant3.0\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll.config
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.Tests.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Owin.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\ShoppingAssistant3.0.dll.config
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Castle.Core.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Moq.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Container.pdb
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Unity.Mvc.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.dll
+C:\Users\Dylan\source\Workspaces\ShoppingAssistant3.0Again\ShoppingAssistant3.0\ShoppingAssistant3.0.Tests\obj\Debug\ShoppingAssistant3.0.Tests.pdb

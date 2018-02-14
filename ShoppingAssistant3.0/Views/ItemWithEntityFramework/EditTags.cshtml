@@ -1,0 +1,50 @@
+﻿@model ShoppingAssistant3._0.Models.Item
+
+@{
+    ViewBag.Title = "EditTags";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Tags for @Model.Name</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Add Tag</h4>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.DropDownList("TagToAdd", (SelectList)ViewBag.OtherTags, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="command" value="Add" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    <div class="form-horizontal">
+        <h4>Delete Tag</h4>
+        <hr />
+        
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.DropDownList("TagToDelete", (SelectList)ViewBag.ItemTags, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="command" value="Delete" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

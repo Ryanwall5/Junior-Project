@@ -1,0 +1,168 @@
+﻿
+@model ShoppingAssistant3._0.Models.Store
+
+@{
+    /**/
+
+    ViewBag.Title = "Storesearch";
+}
+
+
+@{
+    ViewBag.Title = "StoreSearch";
+
+}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZnjsIj8rSNNogXUR2f-QMR8djTCB7-fg&libraries=geometry"></script>
+
+@*<input type="hidden" id="myInput" data-myValue="@ViewBag.Markers" />*@
+
+
+@if (Request.IsAuthenticated)
+{
+    <div>
+        <button class="btn btn-link changeuserhomestorebtn" onclick="openformdialog()">Change home store</button>
+    </div>
+}
+else
+{
+
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron text-center">
+            <h1 style="color:orangered">@Model.Name</h1>
+        </div>
+    </div>
+</div>
+
+<div style="margin-bottom: 30px" class="row">
+    <div class="col-lg-9 col-lg-push-1">
+        <h2>Distance to store</h2>
+        <h3 id="location"></h3>
+        <div style="height: 500px; width: 500px" id="googlemap">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-lg-pull-1">
+        <hr />
+        <table style="padding: 30px;font-weight: bold">
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Address.Street)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Address.Street)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Address.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Address.City)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Address.State)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Address.State)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Address.Zip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Address.Zip)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.PhoneNumber)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.EmailAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.EmailAddress)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+    </div>
+</div>
+
+
+<div id="updateuserhomestorediv" class="updateuserhomestorediv">
+    <h2 class="text-center text-danger">Update Users Home Store</h2>
+    <hr />
+    <form class="form-inline">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownList("StoreName")
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" onclick="updateuserhomestore()" value="Change Home Store" />
+            </div>
+        </div>
+    </form>
+</div>
+
+
+@section scripts
+{
+    <script>
+        var markers =  @Html.Raw(ViewBag.Markers);
+
+        var dialog;
+
+        dialog = $("#updateuserhomestorediv").dialog({
+            autoOpen: false,
+            height: 200,
+            width: 430,
+            modal: true
+        });
+
+
+        function openformdialog() {
+            dialog.dialog("open");
+        }
+
+        //$(".changeuserhomestorebtn").click( function () {
+
+        //});
+
+        function updateuserhomestore() {
+
+            dialog.dialog("close");
+        }
+
+
+
+    </script>
+
+    <script src="~/Scripts/GoogleMapApi.js"></script>
+}

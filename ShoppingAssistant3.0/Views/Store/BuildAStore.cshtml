@@ -1,0 +1,565 @@
+﻿
+@{
+    ViewBag.Title = "Build_A_Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+
+    div#secondstepstorebuild {
+        /*height: 100%;
+    width: 100%;*/
+        /*background-color: orange;*/
+        border: 2px solid;
+    }
+</style>
+
+<h2 class="text-center">Build A Store</h2>
+
+
+<form id="buildastorestepone">
+
+
+
+    <div class="form-group row">
+        <label for="StoreName" class="col-sm-2 col-form-label">Choose a Store</label>
+        <div class="col-md-10">
+            @Html.DropDownList("StoreName")
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputAisles" class="col-sm-2 col-form-label">Number of Aisles</label>
+        <div class="col-sm-10">
+            <input type="number" min="0" max="10" name="aisles" class="form-control" id="inputAisles" placeholder="Enter Number of Aisles">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputSections" class="col-sm-2 col-form-label">Sections</label>
+        <div class="col-sm-10">
+            <input type="number" min="0" max="5" name="sections" class="form-control" id="inputSections" placeholder="Enter Number of Sections">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2">Check if you want a backwall</label>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input id="backwall" class="form-check-input" name="backwall" type="checkbox">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2">Check if you want a left side</label>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input id="left" class="form-check-input" name="left" type="checkbox">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2">Check if you want a right side</label>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input id="right" class="form-check-input" name="right" type="checkbox">
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+            <button id="steponesubmit" type="submit" class="btn btn-primary">Next Step <span class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+    </div>
+</form>
+
+<p><b>Results:</b> <span id="results"></span></p>
+
+<div id="secondstepstorebuild" class="col-md-12" style="overflow-x: scroll; overflow-y: scroll">
+
+</div>
+<div class="col-md-12">
+
+    <button id="submitstore" class="btn btn-success btn-block btn-lg" style="margin: 10px 0"> Submit </button>
+</div>
+
+
+<div id="sectionnamediv" class="updateuserhomestorediv">
+    <h2 class="text-center text-danger">Enter Section Name</h2>
+    <hr />
+    <form id="sectionnameform" class="form-inline">
+        <div class="form-group">
+            <label for="inputsectionname" class="col-sm-2 col-form-label">Section: </label>
+            <div class="col-sm-10">
+                <input type="text" name="sectionname" class="form-control" id="inputsectionname" placeholder="Enter Section Name">
+            </div>
+        </div>
+    </form>
+</div>
+
+@*<div id="erroroutputdiv" class="">
+    <h2 class="text-center text-danger">Error</h2>
+   <p class="text-danger text-capitalize">
+
+   </p>
+</div>*@
+
+
+
+@section Scripts
+{
+    <script>
+
+        $(function () {
+
+            //var storeName;
+            //var storeId;
+            //var aisles;
+            //var sections;
+            //var shelfs;
+
+            var storeId;
+
+
+            var w = 900;
+            var h = 500;
+
+            var paper = Raphael("secondstepstorebuild", w, h);
+
+            paper.setViewBox(0, 0, w, h);
+
+           
+
+            var paperheight = paper.height;
+            var paperwidth = paper.width;
+
+            //paper.
+
+            //paper.canvas.setAttribute('preserveAspectRatio', 'none');
+
+            //var width = 900;
+            //var height = 500
+            //console.log(width);
+            //console.log(height);
+            //var w = 600;
+            //var h = 400;
+            //var paper = Raphael("secondstepstorebuild");
+            //paper.setViewBox(0, 0, w, h, true);
+
+            //// ok, raphael sets width/height even though a viewBox has been set, so let's rip out those attributes (yes, this will not work for VML)
+            //var svg = document.querySelector("svg");
+            //svg.removeAttribute("width");
+            //svg.removeAttribute("height");
+
+
+            // var paper = Raphael(div, width, height);
+
+            //paper.setViewBox(div, width, height);
+
+            // Setting preserveAspectRatio to 'none' lets you stretch the SVG
+            //paper.canvas.setAttribute('preserveAspectRatio', 'none');
+
+            // Change the widht and the height attributes manually through DOM
+            //$('#paper').attr('width', newWeight).attr('height', newHeight);
+
+
+            var st = paper.set();
+            var textset = paper.set();
+
+
+            Raphael.el.red = function () {
+                this.attr({ fill: "#f00" });
+            };
+
+            Raphael.el.green = function () {
+                this.attr({ fill: "green" });
+            };
+
+            Raphael.el.blue = function () {
+                this.attr({ fill: "blue" });
+            };
+
+
+
+            var mouseover = function (event) {
+                this.attr({ fill: "yellow" });
+            }
+            var mouseout = function (event) {
+                this.attr({ fill: "red" });
+            }
+
+            $('#submitstore').click(function () {
+                    window.location.reload(true);
+                    alert("Build a store was completed");
+                });
+
+                
+            
+
+
+            var rectclick = function (event) {
+                alert(this.data("i"));
+                var value1 = "#" + this.data("i");
+
+                var value = this.data("i");
+                this.id = value;
+                $("#sectionnameform").append("<input hidden id=" + " rectsection" + " name=" + "rectsection " + "/>");
+                $("#rectsection").val(value);
+
+                var xcoord = this.getBBox().x;
+                var ycoord = this.getBBox().y;
+                var width = this.getBBox.width;
+                var height = this.getBBox.height;
+                console.log(xcoord + ", " + ycoord + ", " + width + ", " + height);
+
+                dialog.dialog("open");
+
+                //this.unmouseover(mouseover);
+                //this.unmouseout(mouseout);
+                //this.unclick(rectclick);
+            }
+            
+            //var errordialog = $("#erroroutputdiv").dialog({
+            //    autoOpen: false,
+            //    height: 300,
+            //    width: 430,
+            //    modal: true
+            //});
+
+
+
+            var dialog = $("#sectionnamediv").dialog({
+                autoOpen: false,
+                height: 300,
+                width: 430,
+                modal: true,
+                buttons: [
+                    {
+                        text: "Submit",
+                        icon: "ui-icon-closethick",
+                        click: function (event) {
+                            $(this).dialog("close");
+                            event.preventDefault();
+                            var input = $("#sectionnameform").serializeArray();
+
+                            var sectionname = input[0].value;
+                            var shelfseccoords = input[1].value;
+
+                            alert(sectionname + "  " + shelfseccoords);
+
+
+                            $.post("AddSectionToStoreMap", { nameofsection: sectionname, shelfwithsectionumandcoords: shelfseccoords, storeId: storeId }, function (response) {
+
+                                if (response.success) {
+
+                                    alert("Data: " + response.data.Name + ", " + response.data.ShelfName + ", " + response.data.Number + ", " + response.data.Xcoord + ", " + response.data.Ycoord + ", " + response.data.Width + ", " + response.data.Height);
+
+                                    var rect = response.data.ShelfName + "_" + response.data.Number + "_" + response.data.Xcoord + "_" + response.data.Ycoord + "_" + response.data.Width + "_" + response.data.Height;
+
+                                    var rectangle = "#" + response.data.ShelfName + "_" + response.data.Number + "_" + response.data.Xcoord + "_" + response.data.Ycoord + "_" + response.data.Width + "_" + response.data.Height;
+
+
+                                    //var x = response.data.Xcoord - (response.data.Width / 2);
+
+                                    var x = ((response.data.Width / 2) + response.data.Xcoord) 
+                                    var y = ((response.data.Height / 2) + response.data.Ycoord); 
+                                    console.log("the x coordinate = " + x);
+                                    //var y = response.data.Ycoord - (response.data.Height / 2);
+                                    console.log("the y coordinate = " + y);
+                                    paper.text(x, y, response.data.Number).attr({ 'font-weight': 'bold', 'font-size': 16 });
+                                    //$(rectangle).css('cursor', 'not-allowed');
+                                   
+                                    var element = paper.getById(rect);
+                                    element.unclick(rectclick);
+                                    element.unmouseover(mouseover);
+                                    element.unmouseout(mouseout);
+                                    element.attr({ 'cursor': 'not-allowed', 'fill': 'white' });
+                                }
+                                else {
+                                    alert("Error: Try Again!");
+                                }
+
+                            });
+
+                            $("#inputsectionname").val("");
+
+                            $("#rectsection").remove();
+                        }
+                    }
+                ]// end of button
+            });//end of dialog
+
+
+
+
+
+            $("#buildastorestepone").submit(function (event) {
+                event.preventDefault();
+
+
+                var formvalues = $(this).serializeArray();
+                console.log(formvalues);
+                $("#results").empty();
+
+
+                var backwall = false, rightside = false, leftside = false, aisles, sections;
+
+                var shelves = 0;
+
+                $.each(formvalues, function (i, field) {
+                    $("#results").append(field.name + " " + field.value + " ");
+
+                    switch (field.name) {
+                        case "backwall":
+                            {
+                                backwall = true;
+                                shelves += 1;
+
+                                console.log("inside backwall: " + shelves);
+                                AddBackwall(sections, aisles);
+
+                                break;
+                            }
+                        case "right":
+                            {
+                                rightside = true;
+                                shelves += 1;
+                                console.log("inside right: " + shelves);
+                                AddRightWall(sections);
+
+                                break;
+                            }
+                        case "left":
+                            {
+                                leftside = true;
+                                shelves += 1;
+                                console.log("inside left: " + shelves);
+                                AddLeftWall(sections);
+
+                                break;
+                            }
+                        case "aisles":
+                            {
+                                aisles = parseInt(field.value);
+                                shelves += aisles - 1;
+                                console.log("inside aisles: " + shelves);
+                                break;
+                            }
+                        case "sections":
+                            {
+                                sections = parseInt(field.value);
+                                break;
+                            }
+                        case "StoreName":
+                            {
+                                storeId = parseInt(field.value);
+                                break;
+                            }
+                    };
+                });
+
+                buildstore(backwall, rightside, leftside, aisles, sections, shelves, storeId);
+            });
+
+            function AddBackwall(sections, aisles) {
+                var x = 100;
+                var y = 0;
+                var width = (paper.width - 200) / sections;
+                var height = 30;
+                var textxlocation = paper.width / 2;
+                var textylocation = height + 20;
+
+                textset.push(paper.text(textxlocation, textylocation, "Back Wall").attr({ 'font-weight': 'bolder', 'font-size': 24 }))
+         
+                var count = 1;
+                for (var i = 0; i < sections; i++) {
+
+                    paper.add(paper.rect(x, y, width, height)
+                        .data("i", "backwall" + "_" + count + "_" + x + "_" + y + "_" + width + "_" + height)
+                        .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+                    x += width;
+                    count += 1;
+                }
+            };
+
+            function AddLeftWall(sections) {
+                var x = 0;
+                var y = 100;
+                var width = 30;
+                var height = (paper.height - 200) / sections;
+
+                var textxlocation = width + 20;
+                var textylocation = paper.height / 2;
+
+                textset.push(paper.text(textxlocation, textylocation, "Left Wall").rotate(270).attr({ 'font-weight': 'bolder', 'font-size': 24 }))
+
+
+                var count = sections;
+                for (var i = 0; i < sections; i++) {
+
+                    paper.add(paper.rect(x, y, width, height)
+                        .data("i", "backwall" + "_" + sections + "_" + x + "_" + y + "_" + width + "_" + height)
+                        .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+                    y += height;
+                    sections -= 1;
+                }
+            };
+
+
+            function AddRightWall(sections) {
+                var x = paperwidth - 30;
+                var y = 100;
+                var width = 30;
+                var height = (paper.height - 200) / sections;
+
+                var textxlocation = paper.width - width - 20;
+                var textylocation = paper.height / 2;
+
+                textset.push(paper.text(textxlocation, textylocation, "Right Wall").rotate(90).attr({ 'font-weight': 'bolder', 'font-size': 24 }))
+
+
+                var count = sections;
+                for (var i = 0; i < sections; i++) {
+
+                    paper.add(paper.rect(x, y, width, height)
+                        .data("i", "backwall" + "_" + sections + "_" + x + "_" + y + "_" + width + "_" + height)
+                        .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+                    y += height;
+                    sections -= 1;
+                }
+            };
+
+            function buildstore(backwall, right, left, aisles, sections, shelves, storeId) {
+
+                $.post("CreateStoreMap", { aisles: aisles, shelves: shelves, sections: sections, backwall: backwall, rightwall: right, leftwall: left, storeId: storeId }, function (response) {
+                    if (response.success) {
+
+
+                    }
+                    else {
+                        alert(response.error);
+                    }
+                });
+
+                //create svg
+
+                var w = ((paper.width - 120) - (aisles * 40)) / ((aisles - 1) * 2);
+
+
+                var width = 40;
+                var height = 50;
+                var x = 100;
+                var y = 100;
+
+                var z = 0;
+
+                var leftsection = sections;
+                var rightsection = leftsection + 1;
+
+                var shelfnumber = 1;
+                var count = 1;
+
+                for (var i = 0; i < sections; i++) {
+                    for (var j = 0; j < (aisles - 1) * 2; j++) {
+
+                        if (z == 0) {
+
+                            paper.add(paper.rect(x, y, w, height)
+                                .data("i", shelfnumber + "_" + leftsection + "_" + x + "_" + y + "_" + w + "_" + height)
+                                .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer"  }));
+
+                            x += w;
+                            z = 1;
+                        }
+                        else {
+                            paper.add(paper.rect(x, y, w, height)
+                                .data("i", shelfnumber + "_" + rightsection + "_" + x + "_" + y + "_" + w + "_" + height)
+                                .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+
+                            x += width + w;
+                            z = 0;
+
+                            shelfnumber += 1;
+                        }
+
+
+
+                    } // end of inner loop for sections [][]
+
+                    leftsection -= 1;
+                    rightsection += 1;
+                    shelfnumber = 1;
+                    x = 100;
+                    y += height;
+
+                } // end of outer loop for aisles [][]  [][]
+
+
+
+                //for (var i = 0; i < sections; i++) {
+                //    for (var j = 0; j < (aisles - 1) * 2; j++) {
+
+                //        if (z == 0) {
+
+                //            paper.add(paper.rect(x, y, width, height)
+                //                .data("i", shelfnumber + "_" + leftsection + "_" + x + "_" + y)
+                //                .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+
+                //            x += width;
+                //            z = 1;
+                //        }
+                //        else {
+                //            paper.add(paper.rect(x, y, width, height)
+                //                .data("i", shelfnumber + "_" + rightsection + "_" + x + "_" + y)
+                //                .hover(mouseover, mouseout).click(rectclick).attr({ fill: "red", cursor: "pointer" }));
+
+                //            x += width * 2;
+                //            z = 0;
+
+                //            shelfnumber += 1;
+                //        }
+
+
+
+                //    } // end of inner loop for sections [][]
+
+                //    leftsection -= 1;
+                //    rightsection += 1;
+                //    shelfnumber = 1;
+                //    x = 60;
+                //    y += height;
+
+                //} // end of outer loop for aisles [][]  [][]
+
+
+
+                var aislelocationx = 80;
+                var aislelocationy = ((sections * height)) + 100;
+
+
+
+                //insert aisle numbers into store
+                for (var i = 1; i < aisles + 1; i++) {
+
+                    textset.push(paper.text(aislelocationx, aislelocationy, i).attr({ 'font-weight': 'bolder', 'font-size': 24 }))
+                    aislelocationx += 40 + (w * 2);
+                }
+
+
+            }// end of buildastore function
+
+        });
+
+    </script>
+
+
+}
